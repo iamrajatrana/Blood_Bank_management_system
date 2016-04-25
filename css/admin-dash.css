@@ -1,0 +1,27 @@
+#valid_user,#valid_pass{
+	margin-left: 230px;
+	color: red;
+}
+
+#stat{
+	margin-left: 150px;
+	color: red;
+}
+
+#forgot{
+	height:20px;
+	padding:0;
+	width: 300px;
+	border: 1px solid blue;
+	margin-left: 50px;
+}
+
+#forgot_form{
+	display: none;
+}
+
+#valid_user1{
+	margin-left: 180px;
+	color:red;
+}
+

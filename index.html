@@ -1,0 +1,95 @@
+<?php
+require 'db_connect.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>NIT Hamirpur Blood Bank Info</title>
+		<link rel="stylesheet" type="text/css" href="css/data.css" />
+		<link rel="stylesheet" type="text/css" href="css/head.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="form-group">
+                    <form action="" method="GET">
+                            <p>
+                            	<h1>Select the blood group</h1>
+                               <select name="Name">
+                                   <option value="ap">A+</option>
+                                   <option value="bp">B+</option>
+                                   <option value="abp">AB+</option>
+                                   <option value="op">O+</option>
+                                   <option value="on">O-</option>
+                               </select>
+                            
+                               
+                                    <input type="submit" value="SHOW" name="show"/> 
+								</p>
+
+			</form>
+			</div>
+			
+			<div class="data">
+				<h2>NIT Record</h2>
+				<p>This is a basic usage example. Scroll down to see the sticky table header in action. And of course, multiple instances are supported.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Blood Group</th>
+							<th>Current Year</th>
+							<th>Email</th>
+							<th>Mobile</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+
+							<?php
+
+       if(isset($_GET['Name'])&&!empty($_GET['Name']))
+       {
+           $Name=$_GET['Name'];
+	
+               if($Name=='ap'||$Name=='abp' ||$Name=='bp' ||$Name=='op' ||$Name=='on')
+	           {
+                $query="SELECT `roll_no`,`name`,`email`,`blood_grp`,`mobile`,`gender`,`cur_year` FROM `student_db` WHERE `blood_grp`= '$Name' ";
+					if($query_run=mysql_query($query))
+					{
+					 
+					      if(mysql_num_rows($query_run)==NULL)
+						        echo 'no res';
+						  else
+						  {
+					             while($fetch_data=mysql_fetch_object($query_run))
+						         {
+						             $rn=$fetch_data['roll_no'];
+									 $name=$fetch_data['name'];
+									 $email=$fetch_data['email'];
+									 $bg=$fetch_data['blood_grp'];
+									 $mob=$fetch_data['mobile'];
+									 $gen=$fetch_data['gender'];
+									 $cury=$fetch_data['cur_year'];
+
+									 echo "<tr><td class='user-name->$fetch_data->roll_no</td><td class='user-blood->$fetch_data->bg</td><td class='user-cur->$fetch_data->cury</td><td class='user-email'>$fetch_data->email</td><td class='user-mobile'>$fetch_data->mob</td></tr>";
+									 }
+						  }
+					}
+         }
+}
+
+?>
+
+							
+									
+					</tbody>
+				</table>
+			</div>
+		</div>
+				
+		
+	</body>
+</html>

@@ -1,0 +1,113 @@
+  #orig{
+          
+          transition : 0.3s all linear;
+          display: none;
+
+ }
+
+ #rollstatus{
+          color: green;
+          float: right;
+
+  }
+
+#status{
+  margin-left: 120px;
+  color : blue;
+
+}
+
+
+ #lo{
+          float: right;
+}
+ #blood{
+          padding: 0;
+          margin: 0;
+          font-size: 30px;
+          font-weight: 800;
+          margin-top: -30px;
+
+}
+
+
+*{ -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+  background: #fff;
+  color: #383a3c;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Raleway', Calibri, Arial, sans-serif;
+}
+
+a {
+  outline: none;
+}
+
+a {
+  color: #566473;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #34495e;
+}
+
+
+
+
+
+.header {
+  margin: -10px auto 0 auto;
+  max-width: 760px;
+  
+}
+
+.header h1 {
+  margin-top: 30px;
+  padding: 20px 10px;
+  font-size: 3.5em;
+  line-height: 1;
+  font-weight: 200;
+}
+
+.header h1 span {
+  display: block;
+  
+  font-size: 36%;
+  color: #95a5a6;
+  line-height: 1.4;
+}
+
+
+.head {
+  
+  font-size: 0.8em;
+}
+
+.head a {
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  border-radius: 2px;
+  font-size: 110%;
+  padding:7px 11px;
+  border: 2px solid transparent;
+  margin: 3px;
+}
+
+.head a:hover,
+.head a.current-demo {
+  color: inherit;
+  border-color: initial;
+}
+
+
+
+#qa a{
+  margin-right: 10px;
+}
