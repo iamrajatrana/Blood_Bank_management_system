@@ -7,6 +7,10 @@ Features are:
 
 Guest User:
   - can search for the info of donor on basis of Blood Group, Department, and Gender
-
+  
+Admin:
+  - Has to login.
+  - Can Add Student, delete student, Update information
+  - 
 
 
